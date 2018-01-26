@@ -1,7 +1,7 @@
 <?php
 include('dbConfig.php');
 
-$data = file('data.txt', FILE_IGNORE_NEW_LINES);
+$data = file('employees.txt', FILE_IGNORE_NEW_LINES);
 
 $data = cleanEmptyRows($data);
 $data = findIndexedRows($data);
