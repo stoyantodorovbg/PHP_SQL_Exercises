@@ -34,7 +34,9 @@ function cleanEmptyRows(array $arr) {
 function findIndexedRows(array $arr) {
     $output = [];
     for ($i = 0; $i < count($arr); $i++) {
-        if (preg_match('/^\d+$/', $arr[$i][0])
+        if (isset($arr[$i][0])
+            &&
+            preg_match('/^\d+$/', $arr[$i][0])
             &&
             strval(intval($arr[$i][0])) == strval($arr[$i][0])) {
             $output[] = $arr[$i];
